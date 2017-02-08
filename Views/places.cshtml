@@ -1,0 +1,8 @@
+<h1>Place List</h1>
+<ul>
+  @foreach (var places in Model)
+  {
+    <li><a href='/places/@places.GetId()'>@places.GetDescription()</a></li>
+  }
+</ul>
+<a href = '/places/new'> Add a new place</a>

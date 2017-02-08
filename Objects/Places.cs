@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace Place.Objects
+namespace Places.Objects
 {
-  public class Places
+  public class Place
   {
     private string _description;
     private int _id;

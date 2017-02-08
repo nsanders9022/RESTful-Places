@@ -6,15 +6,17 @@ namespace Places.Objects
   {
     private string _description;
     private string _duration;
+    private string _picture;
     private int _id;
     private static List<Place> _instances = new List<Place>{};
 
-    public Place (string description, string duration)
+    public Place (string description, string duration, string picture)
     {
       _description = description;
       _instances.Add(this);
       _id = _instances.Count;
       _duration = duration;
+      _picture = picture;
     }
 
     public string GetDescription()
@@ -33,6 +35,14 @@ namespace Places.Objects
     public void SetDuration(string newDuration)
     {
       _duration = newDuration;
+    }
+    public string GetPicture()
+    {
+      return _picture;
+    }
+    public void SetPicture(string newPicture)
+    {
+      _picture = newPicture;
     }
     public static List<Place> GetAll()
     {

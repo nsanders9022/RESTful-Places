@@ -5,14 +5,16 @@ namespace Places.Objects
   public class Place
   {
     private string _description;
+    private string _duration;
     private int _id;
     private static List<Place> _instances = new List<Place>{};
 
-    public Place (string description)
+    public Place (string description, string duration)
     {
       _description = description;
       _instances.Add(this);
       _id = _instances.Count;
+      _duration = duration;
     }
 
     public string GetDescription()
@@ -23,6 +25,14 @@ namespace Places.Objects
     public void SetDescription(string newDescription)
     {
       _description = newDescription;
+    }
+    public string GetDuration()
+    {
+      return _duration;
+    }
+    public void SetDuration(string newDuration)
+    {
+      _duration = newDuration;
     }
     public static List<Place> GetAll()
     {

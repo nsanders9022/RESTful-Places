@@ -26,7 +26,7 @@ namespace Places
         return View["place.cshtml", place];
       };
       Post["/places"] = _ => {
-        Place newPlace = new Place(Request.Form["new-place"]);
+        Place newPlace = new Place(Request.Form["new-place"], Request.Form["new-duration"]);
         List<Place> allPlaces = Place.GetAll();
         return View["places.cshtml", allPlaces];
       };
